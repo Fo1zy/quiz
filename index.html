@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: "Nunito", sans-serif; ;
+    }
+</style>
+</head>
+<body>
+    <div class="fixed hidden inset-0 flex items-center justify-center">
+        <button class="h-[40px] px-5 bg-[#ffa722] rounded text-white">
+            Start
+        </button>
+    </div>
+    <div class="w-[600px] border border-gray-200 mx-auto my-10">
+        <div class="p-10 text-center hidden" id="resultContent">
+            <p>Düzgün cavablar: <span id="success"></span></p>
+            <p>Səhv cavablar: <span id="error"></span></p>
+            <button id="reloadQuiz" class="h-[40px] px-5 bg-[#ffa722] rounded text-white">
+                Start
+            </button>
+        </div>
+        <div class="hidden" id="quizContent">
+            <div class="bg-gray-100 py-[7px] px-[10px] flex items-center justify-between">
+                <span class="font-bold text-[18px]">Quiz app</span>
+                <div class="bg-[#626262] text-white px-[8px] py-[5px] rounded-[6px]">
+                    <span id="time">Time:</span>
+                    <span id="timer" class="size-[25px] inline-flex items-center justify-center bg-[#ffa722] text-white rounded">10</span>
+                </div>
+            </div>
+            <div class="p-[27px]" id="question">
+                
+            </div>
+            <div class="bg-gray-100 py-[8px] px-[15px] flex items-center justify-between">
+                <span class="inline-flex space-x-1 bg-[#ffa722] text-white px-[8px] h-[35px] items-center justify-center rounded">
+                    <span id="CurrentQuestion">1</span>
+                    <span>/</span>
+                    <span id="TotalQuestion">10</span>
+                </span>
+                <div>
+                    <button id="btnnext" class="h-[35px] hidden inline-flex items-center justify-center bg-[#2260ff] text-white px-[15px] rounded">
+                        Next question
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>
